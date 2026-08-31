@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Politique de confidentialité — Mon Atlas</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité de l’application Mon Atlas."
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html">Mon Atlas</a>
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="../index.html">Accueil</a>
+          <a href="../support/index.html">Assistance</a>
+          <a href="index.html" aria-current="page">Confidentialité</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenu">
+      <div class="wrap">
+        <p class="kicker">Informations légales</p>
+        <h1>Politique de confidentialité</h1>
+        <p class="lede">
+          Cette page décrit les traitements de données liés à l’application
+          mobile <strong>Mon Atlas</strong>, d’après le fonctionnement réel du
+          logiciel et de sa configuration de production.
+        </p>
+        <p class="muted">Dernière mise à jour : 31 août 2026</p>
+
+        <h2>Éditeur et contact</h2>
+        <p>
+          Application : Mon Atlas<br />
+          Éditeur : Chemseddine Afouf<br />
+          Contact :
+          <a href="mailto:supportmonatlas@gmail.com"
+            >supportmonatlas@gmail.com</a
+          >
+        </p>
+
+        <h2>Données que vous saisissez</h2>
+        <p>
+          Selon l’usage, vous pouvez renseigner : une adresse e-mail et un mot
+          de passe (création ou connexion de compte) ; un prénom, une ville
+          préférée, une langue et un type d’utilisateur ; des véhicules
+          d’admission temporaire (libellé, plaque, pays, dates, notes) ; des
+          filtres de navigation ; un signalement de contenu incorrect ou
+          incomplet.
+        </p>
+        <p>
+          Le mot de passe n’est pas stocké dans l’application. Il est traité par
+          le service d’authentification (Supabase Auth).
+        </p>
+        <p>
+          La connexion via Apple ou Google n’est pas proposée dans la
+          configuration de production actuelle.
+        </p>
+
+        <h2>Compte et données associées (Supabase)</h2>
+        <p>
+          Lorsque le backend est configuré, l’application peut créer une session
+          technique anonyme, puis un compte e-mail si vous vous inscrivez. Un
+          identifiant de compte est alors associé à vos données synchronisées.
+        </p>
+        <p>Peuvent être enregistrées côté serveur, liées à votre compte :</p>
+        <ul>
+          <li>
+            le profil (prénom, ville préférée, langue, type d’utilisateur, et
+            éventuellement un nom affiché ou une URL d’avatar) ;
+          </li>
+          <li>
+            les favoris (type et identifiant d’un lieu, d’un prix ou d’une
+            démarche) ;
+          </li>
+          <li>
+            les préférences (délai des rappels de prière, activation des rappels
+            d’admission temporaire, filtres Explorer) ;
+          </li>
+          <li>les véhicules d’admission temporaire ;</li>
+          <li>
+            les signalements de contenu (entité concernée, type de signalement,
+            texte saisi).
+          </li>
+        </ul>
+        <p>
+          Ces enregistrements sont limités à votre compte par des règles
+          d’accès. La ville choisie automatiquement ou manuellement est
+          stockée comme nom de ville ; le mode « automatique / manuel » de la
+          ville est conservé sur l’appareil et n’est pas envoyé avec le profil
+          serveur.
+        </p>
+
+        <h2>Localisation</h2>
+        <p>
+          L’application peut demander l’accès à la position
+          <strong>lorsque vous utilisez l’app</strong> (centrer la carte,
+          météo, horaires de prière, estimation de ville). Elle ne demande pas
+          une localisation permanente ni en arrière-plan.
+        </p>
+        <p>
+          Les coordonnées GPS ne sont pas enregistrées dans le compte Supabase.
+          Elles sont transmises, le temps de la requête, aux services nécessaires
+          : Open-Meteo (géocodage inverse et météo) et AlAdhan (horaires de
+          prière). Un cache local sur l’appareil peut retenir le dernier résultat
+          météo ou les horaires, indexé par des coordonnées arrondies. Ce cache
+          n’est pas le compte cloud.
+        </p>
+
+        <h2>Stockage local et cache</h2>
+        <p>
+          Sur l’appareil, l’application conserve notamment le profil, les
+          favoris, les préférences, les véhicules d’admission temporaire, les
+          signalements en attente de synchronisation, l’état d’onboarding, et
+          des caches de météo, d’horaires de prière et de taux de change. Ces
+          caches ont une taille limitée ; aucune durée de conservation en jours
+          n’est définie dans le logiciel.
+        </p>
+        <p>
+          Un export « Exporter mes données » copie un résumé JSON dans le
+          presse-papiers de l’appareil. Il n’est pas envoyé automatiquement à
+          l’éditeur.
+        </p>
+
+        <h2>Notifications</h2>
+        <p>
+          Les rappels de prière et d’admission temporaire sont des notifications
+          <strong>locales</strong> sur l’appareil. L’application n’utilise pas
+          de notifications push distantes dans sa configuration actuelle. Vous
+          pouvez refuser la permission système ou désactiver ces rappels dans
+          l’app.
+        </p>
+
+        <h2>Calendrier</h2>
+        <p>
+          Si vous choisissez d’ajouter un événement au calendrier de
+          l’appareil, le titre, les dates et la ville sont transmis au
+          calendrier système. Ils ne sont pas envoyés aux serveurs de Mon Atlas
+          pour cet usage.
+        </p>
+
+        <h2>Sentry, publicité et suivi</h2>
+        <p>
+          L’outil de rapport de plantages Sentry est
+          <strong>désactivé</strong> dans la configuration de production
+          actuelle (aucun identifiant de projet n’est fourni à l’application).
+        </p>
+        <p>
+          Aucune publicité n’est intégrée. Aucun kit de suivi publicitaire, ni
+          identifiant publicitaire, n’est présent dans l’application.
+        </p>
+
+        <h2>Services tiers</h2>
+        <p>Dans la configuration de production actuelle, l’application s’appuie notamment sur :</p>
+        <ul>
+          <li>
+            <strong>Supabase</strong> — authentification, stockage des données
+            de compte listées plus haut, et diffusion d’images éditoriales
+            publiques ;
+          </li>
+          <li>
+            <strong>Open-Meteo</strong> — géocodage inverse et météo (coordonnées) ;
+          </li>
+          <li><strong>AlAdhan</strong> — horaires de prière (coordonnées, date) ;</li>
+          <li>
+            <strong>Frankfurter</strong> — taux de change EUR/MAD (sans compte
+            utilisateur) ;
+          </li>
+          <li>
+            <strong>OpenStreetMap</strong> — tuiles de carte (requêtes techniques
+            de téléchargement) ;
+          </li>
+          <li>
+            <strong>Google Fonts</strong> — téléchargement de la police utilisée
+            dans l’interface de l’application.
+          </li>
+        </ul>
+        <p>
+          Un lien vers Google Maps peut s’ouvrir si vous choisissez d’afficher
+          un lieu dans une application ou un navigateur externe. OSRM et d’autres
+          fonctions expérimentales ne sont pas proposées dans cette
+          configuration.
+        </p>
+
+        <h2>Conservation et suppression</h2>
+        <p>
+          Le logiciel ne définit pas de durée de conservation en jours ou en
+          mois. Les données de compte sont conservées tant que le compte existe,
+          pour fournir le service (synchronisation, favoris, rappels, etc.).
+        </p>
+        <p>
+          Depuis Profil, <strong>Supprimer mon compte</strong> supprime le
+          compte d’authentification. Les données cloud associées (profil,
+          favoris, préférences, véhicules d’admission temporaire, signalements)
+          sont alors supprimées avec le compte. Les données personnelles de ce
+          compte présentes sur l’appareil sont aussi effacées localement. La
+          déconnexion n’efface pas le compte cloud.
+        </p>
+
+        <h2>Droits et contact</h2>
+        <p>
+          Selon le droit applicable, vous pouvez demander l’accès, la
+          rectification ou la suppression de données vous concernant, ou poser
+          une question sur ces traitements. Écrivez à
+          <a href="mailto:supportmonatlas@gmail.com"
+            >supportmonatlas@gmail.com</a
+          >.
+          Vous pouvez aussi exporter un extrait depuis l’application et
+          supprimer le compte comme indiqué ci-dessus.
+        </p>
+        <p>
+          Cette page décrit le fonctionnement constaté du logiciel. Elle ne
+          constitue pas un avis juridique.
+        </p>
+
+        <p class="meta">
+          <a href="../support/index.html">Assistance</a>
+          ·
+          <a href="../index.html">Accueil</a>
+        </p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>Mon Atlas · Chemseddine Afouf</p>
+        <p>
+          <a href="../index.html">Accueil</a>
+          ·
+          <a href="../support/index.html">Assistance</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
