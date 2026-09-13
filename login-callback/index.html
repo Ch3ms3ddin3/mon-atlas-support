@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ouverture de Mon Atlas</title>
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Retour vers l’application Mon Atlas après confirmation d’e-mail ou réinitialisation du mot de passe."
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html">Mon Atlas</a>
+      </div>
+    </header>
+    <main id="contenu">
+      <div class="wrap">
+        <p class="kicker">Compte</p>
+        <h1>Ouverture de Mon Atlas</h1>
+        <p class="lede" id="status">
+          Retour vers l’application. Si rien ne se passe, touchez le bouton
+          ci-dessous (nécessaire depuis Gmail ou Mail).
+        </p>
+        <div class="actions">
+          <a class="button" id="open-atlas" href="io.supabase.atlas://login-callback"
+            >Ouvrir Atlas</a
+          >
+        </div>
+      </div>
+    </main>
+    <script>
+      (function () {
+        var target =
+          "io.supabase.atlas://login-callback" +
+          window.location.search +
+          window.location.hash;
+        var link = document.getElementById("open-atlas");
+        if (link) {
+          link.setAttribute("href", target);
+        }
+        window.location.replace(target);
+      })();
+    </script>
+  </body>
+</html>
