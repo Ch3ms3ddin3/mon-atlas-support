@@ -31,7 +31,7 @@
           mobile <strong>Mon Atlas</strong>, d’après le fonctionnement réel du
           logiciel et de sa configuration de production.
         </p>
-        <p class="muted">Dernière mise à jour : 11 octobre 2026</p>
+        <p class="muted">Dernière mise à jour : 12 octobre 2026</p>
 
         <h2>Éditeur et contact</h2>
         <p>
@@ -143,6 +143,29 @@
           pour cet usage.
         </p>
 
+        <h2>Recherche vocale sur iPhone</h2>
+        <p>
+          La dictée est facultative et démarre uniquement lorsque vous appuyez
+          sur le bouton microphone de la recherche et autorisez le microphone
+          ainsi que la reconnaissance vocale. Vous pouvez toujours saisir votre
+          recherche au clavier.
+        </p>
+        <p>
+          Le service de reconnaissance vocale d’Apple transforme votre voix
+          en texte. Atlas demande un traitement sur l’appareil lorsque cette
+          capacité est disponible pour la langue et l’iPhone utilisés. Dans les
+          autres cas, l’audio peut être transmis à Apple pour être reconnu.
+          Ces traitements relèvent du service de reconnaissance vocale d’Apple.
+        </p>
+        <p>
+          Atlas ne crée ni ne conserve de fichier audio et n’envoie pas votre
+          audio à Supabase. Le texte reconnu remplit le champ de recherche et
+          suit le fonctionnement habituel de la recherche dans l’application.
+          Une session de dictée s’arrête après au plus 30 secondes ; vous pouvez
+          aussi l’arrêter avec le bouton microphone. Les autorisations peuvent
+          être retirées dans les réglages iOS.
+        </p>
+
         <h2>Polices et verrouillage biométrique</h2>
         <p>
           Les polices de l’interface sont incluses dans l’application ou fournies
@@ -169,6 +192,8 @@
         <h2>Services tiers</h2>
         <p>Dans la configuration de production actuelle, l’application s’appuie notamment sur :</p>
         <ul>
+          <li><strong>Apple Speech</strong> — reconnaissance vocale facultative,
+            sur l’appareil si disponible, sinon avec un traitement possible par Apple ;</li>
           <li>
             <strong>Supabase</strong> — authentification, stockage des données
             de compte listées plus haut, et diffusion d’images éditoriales
